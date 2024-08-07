@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseCraft</title>
+    <link rel="stylesheet" href="./css/nav.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="tab-container">
+        <a href="Index.html" class="tab_label" id="home">Home</a>
+        <a href="Courses.html" class="tab_label" id="courses">Courses</a>
+        <a href="Contact.html" class="tab_label" id="contact">Contact</a>
+        <a href="Pricing.html" class="tab_label" id="pricing">Pricing</a>
+        <a href="MyCourses.html" class="tab_label" id="mycourses">My Courses</a>
+        <a href="Login.html" class="tab_label" id="login">Login/SignUp</a>
+        <div class="indicator"></div>
+      </div>
+    </nav>
+
+    <script>
+      // Get the current URL
+      const currentLocation = window.location.href;
+
+      // Get all nav links
+      const navLinks = document.querySelectorAll(".tab_label");
+
+      // Remove active class from all links and add to the current link
+      navLinks.forEach((link) => {
+        if (currentLocation.includes(link.href)) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

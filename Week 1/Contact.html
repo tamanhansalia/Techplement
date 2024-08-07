@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - LearnSphere</title>
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="tab-container">
+        <a href="Index.html" class="tab_label" id="home">Home</a>
+        <a href="Courses.html" class="tab_label" id="courses">Courses</a>
+        <a href="Contact.html" class="tab_label" id="contact">Contact</a>
+        <a href="Pricing.html" class="tab_label" id="pricing">Pricing</a>
+        <a href="MyCourses.html" class="tab_label" id="mycourses">My Courses</a>
+        <a href="Login.html" class="tab_label" id="login">Login/SignUp</a>
+        <div class="indicator"></div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <header>
+        <h1>We'd Love to Help</h1>
+        <p>Reach out and we'll get in touch within 24 hours</p>
+      </header>
+      <div class="card">
+        <form class="form">
+          <div class="form__group field">
+            <input
+              type="text"
+              id="name"
+              class="form__field"
+              placeholder="Name"
+              required
+            />
+            <label for="name" class="form__label">Name</label>
+          </div>
+          <div class="form__group field">
+            <input
+              type="email"
+              id="email"
+              class="form__field"
+              placeholder="Email"
+              required
+            />
+            <label for="email" class="form__label">Email</label>
+          </div>
+          <div class="form__group field">
+            <input
+              type="tel"
+              id="phonenumber"
+              class="form__field"
+              placeholder="Phone Number"
+              required
+            />
+            <label for="phonenumber" class="form__label">Phone Number</label>
+          </div>
+          <div class="form__group field">
+            <textarea
+              id="message"
+              class="form__field"
+              placeholder="Message"
+              required
+            ></textarea>
+            <label for="message" class="form__label">Message</label>
+          </div>
+          <button class="button">
+            <p class="text">Click me</p>
+          </button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Get the current URL
+      const currentLocation = window.location.href;
+
+      // Get all nav links
+      const navLinks = document.querySelectorAll(".tab_label");
+
+      // Remove active class from all links and add to the current link
+      navLinks.forEach((link) => {
+        if (currentLocation.includes(link.href)) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
