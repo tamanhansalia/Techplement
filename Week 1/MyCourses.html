@@ -8,7 +8,10 @@
   </head>
   <body>
     <nav>
-      <div class="tab-container">
+      <div class="hamburger-menu" id="hamburger-menu">
+        <i class="bx bx-menu-alt-left"></i>
+      </div>
+      <div class="tab-container" id="tab-container">
         <a href="Index.html" class="tab_label" id="home">Home</a>
         <a href="Courses.html" class="tab_label" id="courses">Courses</a>
         <a href="Contact.html" class="tab_label" id="contact">Contact</a>
@@ -34,6 +37,13 @@
           link.classList.remove("active");
         }
       });
+
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+        const tabContainer = document.getElementById("tab-container");
+
+        hamburgerMenu.addEventListener("click", () => {
+          tabContainer.classList.toggle("show");
+        });
     </script>
   </body>
 </html>
