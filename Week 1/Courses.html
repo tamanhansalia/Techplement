@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CourseCraft</title>
     <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/courses.css" />
+    <!-- Include Boxicons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons/css/boxicons.min.css"
+    />
   </head>
   <body>
     <nav>
@@ -14,26 +20,108 @@
         <a href="Contact.html" class="tab_label" id="contact">Contact</a>
         <a href="Pricing.html" class="tab_label" id="pricing">Pricing</a>
         <a href="MyCourses.html" class="tab_label" id="mycourses">My Courses</a>
+        <a href="Aboutus.html" class="tab_label" id="Aboutus">About Us</a>
         <a href="Login.html" class="tab_label" id="login">Login/SignUp</a>
-        <div class="indicator"></div>
       </div>
     </nav>
 
-    <script>
-      // Get the current URL
-      const currentLocation = window.location.href;
+    <header class="header">
+      <h1>Explore Our Courses</h1>
+      <p>
+        Our courses offer comprehensive content and practical experience to help
+        you succeed.
+      </p>
+    </header>
 
-      // Get all nav links
-      const navLinks = document.querySelectorAll(".tab_label");
-
-      // Remove active class from all links and add to the current link
-      navLinks.forEach((link) => {
-        if (currentLocation.includes(link.href)) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
-      });
-    </script>
+    <section class="courses-section">
+      <div class="course-card">
+        <div class="course-card-img" style="background-color: #d0eaff"></div>
+        <div class="course-card-info">
+          <p class="course-title">Web Development</p>
+          <p class="course-description">
+            Learn the fundamentals of web development, including HTML, CSS, and
+            JavaScript.
+          </p>
+        </div>
+        <div class="course-card-footer">
+          <span class="course-price">$299.99</span>
+          <div class="buy-button"><i class="bx bxs-cart"></i> Buy Now</div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-card-img" style="background-color: #f0f5ff"></div>
+        <div class="course-card-info">
+          <p class="course-title">Data Science</p>
+          <p class="course-description">
+            Master data analysis and visualization techniques using Python and
+            R.
+          </p>
+        </div>
+        <div class="course-card-footer">
+          <span class="course-price">$349.99</span>
+          <div class="buy-button"><i class="bx bxs-cart"></i> Buy Now</div>
+        </div>
+      </div>
+      <!-- Add additional course cards here -->
+      <!-- Repeat the block below with updated details -->
+      <!-- Example: -->
+      <div class="course-card">
+        <div class="course-card-img" style="background-color: #d9f2d0"></div>
+        <div class="course-card-info">
+          <p class="course-title">Java Programming</p>
+          <p class="course-description">
+            Explore object-oriented programming and build applications with
+            Java.
+          </p>
+        </div>
+        <div class="course-card-footer">
+          <span class="course-price">$279.99</span>
+          <div class="buy-button"><i class="bx bxs-cart"></i> Buy Now</div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-card-img" style="background-color: #d9f2d0"></div>
+        <div class="course-card-info">
+          <p class="course-title">Java Programming</p>
+          <p class="course-description">
+            Explore object-oriented programming and build applications with
+            Java.
+          </p>
+        </div>
+        <div class="course-card-footer">
+          <span class="course-price">$279.99</span>
+          <div class="buy-button"><i class="bx bxs-cart"></i> Buy Now</div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-card-img" style="background-color: #d9f2d0"></div>
+        <div class="course-card-info">
+          <p class="course-title">Java Programming</p>
+          <p class="course-description">
+            Explore object-oriented programming and build applications with
+            Java.
+          </p>
+        </div>
+        <div class="course-card-footer">
+          <span class="course-price">$279.99</span>
+          <div class="buy-button"><i class="bx bxs-cart"></i> Buy Now</div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-card-img" style="background-color: #d9f2d0"></div>
+        <div class="course-card-info">
+          <p class="course-title">Java Programming</p>
+          <p class="course-description">
+            Explore object-oriented programming and build applications with
+            Java.
+          </p>
+        </div>
+        <div class="course-card-footer">
+          <span class="course-price">$279.99</span>
+          <div class="buy-button"><i class="bx bxs-cart"></i> Buy Now</div>
+        </div>
+      </div>
+      <!-- Continue adding more cards similarly -->
+    </section>
   </body>
 </html>
