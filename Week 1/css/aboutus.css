@@ -48,7 +48,7 @@ body {
 }
 
 section {
-  padding: 60px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -169,7 +169,6 @@ section {
 .contact-callout {
   background: dodgerblue;
   color: white;
-  padding: 60px 20px;
   text-align: center;
 }
 
@@ -199,15 +198,32 @@ section {
   color: white;
 }
 
+
 footer {
-  background: #333;
-  color: white;
-  text-align: center;
+  background-color: #333;
+  color: #fff;
   padding: 20px 0;
+  text-align: center;
 }
 
 footer p {
-  margin: 0;
+  margin-bottom: 10px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .social-icons a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: dodgerblue;
 }
 
 /* Responsive Design */
@@ -220,13 +236,22 @@ footer p {
   .team-section .team-members {
     flex-direction: column;
   }
+  .contact-callout h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-callout p {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+  }
+  
+section {
+  padding: 15px 20px;
+  text-align: center;
 }
-.contact-callout h1 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.header{
+  padding: 0;
 }
 
-.contact-callout p {
-  font-size: 0.75rem;
-  margin-bottom: 20px;
 }

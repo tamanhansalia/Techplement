@@ -6,9 +6,16 @@
     <title>Contact Us - LearnSphere</title>
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/nav.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav>
+      <div class="navbar-logo">
+        <a href="Index.html">LearnSphere</a>
+      </div>
       <div class="hamburger-menu" id="hamburger-menu">
         <i class="bx bx-menu-alt-left"></i>
       </div>
@@ -23,14 +30,83 @@
       </div>
     </nav>
 
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">
+          <i class="bx bx-plus"></i> <span>What courses do you offer?</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            We offer a wide range of courses across various domains including
+            programming, design, marketing, and personal development. Our
+            courses are designed to cater to all skill levels from beginners to
+            advanced professionals.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <i class="bx bx-plus"></i>
+          <span>How can I enroll in a course?</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            To enroll in a course, simply visit the course page and click on the
+            'Enroll Now' button. You will need to create an account or log in if
+            you already have one. Follow the prompts to complete your
+            enrollment.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <i class="bx bx-plus"></i> <span>Are the courses self-paced?</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Yes, most of our courses are self-paced, allowing you to learn at
+            your own convenience. However, some courses may have specific
+            deadlines or live sessions scheduled as part of the curriculum.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <i class="bx bx-plus"></i> <span>What is your refund policy?</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            We offer a 14-day refund policy for our courses. If you are not
+            satisfied with the course content within the first 14 days of
+            enrollment, you can request a refund by contacting our support team.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <i class="bx bx-plus"></i> <span>How can I contact support?</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            You can contact our support team through the 'Contact Us' page on
+            our website or by emailing support@learnsphere.com. We are here to
+            help with any questions or issues you may have.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <div class="container">
       <header>
         <h1>We'd Love to Help</h1>
         <p>Reach out and we'll get in touch within 24 hours</p>
       </header>
+
       <div class="card">
         <form class="form">
           <div class="form__group field">
+            <label for="name" class="form__label">Name</label>
             <input
               type="text"
               id="name"
@@ -38,9 +114,9 @@
               placeholder="Name"
               required
             />
-            <label for="name" class="form__label">Name</label>
           </div>
           <div class="form__group field">
+            <label for="email" class="form__label">Email</label>
             <input
               type="email"
               id="email"
@@ -48,9 +124,9 @@
               placeholder="Email"
               required
             />
-            <label for="email" class="form__label">Email</label>
           </div>
           <div class="form__group field">
+            <label for="phonenumber" class="form__label">Phone Number</label>
             <input
               type="tel"
               id="phonenumber"
@@ -58,25 +134,29 @@
               placeholder="Phone Number"
               required
             />
-            <label for="phonenumber" class="form__label">Phone Number</label>
           </div>
           <div class="form__group field">
+            <label for="message" class="form__label">Message</label>
             <textarea
               id="message"
               class="form__field"
               placeholder="Message"
               required
             ></textarea>
-            <label for="message" class="form__label">Message</label>
           </div>
           <button class="button">
-            <p class="text">Click me</p>
+            <p class="text">Submit</p>
           </button>
         </form>
       </div>
     </div>
     <footer>
-      <p>&copy; 2024 Your Company. All rights reserved.</p>
+      <p>© 2024 LearnSphere. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+      </div>
     </footer>
 
     <script>
@@ -95,12 +175,21 @@
         }
       });
 
-      const hamburgerMenu = document.getElementById("hamburger-menu");
-        const tabContainer = document.getElementById("tab-container");
-
-        hamburgerMenu.addEventListener("click", () => {
+      document
+        .getElementById("hamburger-menu")
+        .addEventListener("click", function () {
+          const tabContainer = document.getElementById("tab-container");
           tabContainer.classList.toggle("show");
         });
+    </script>
+
+    <script>
+      document.querySelectorAll(".faq-question").forEach((item) => {
+        item.addEventListener("click", () => {
+          const faqItem = item.parentElement;
+          faqItem.classList.toggle("active");
+        });
+      });
     </script>
   </body>
 </html>

@@ -13,6 +13,9 @@
   </head>
   <body>
     <nav>
+      <div class="navbar-logo">
+        <a href="Index.html">LearnSphere</a>
+      </div>
       <div class="hamburger-menu" id="hamburger-menu">
         <i class="bx bx-menu-alt-left"></i>
       </div>
@@ -167,10 +170,15 @@
         sapiente quas ut accusantium animi facere eius et eligendi recusandae
         ipsa sunt culpa.
       </p>
-      <a href="contact.html" class="btn">Contact Us</a>
+      <a href="contact.html" class="btn">Get in touch</a>
     </section>
     <footer>
-      <p>&copy; 2024 LearnSphere. All rights reserved.</p>
+      <p>© 2024 LearnSphere. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+      </div>
     </footer>
     <script>
       // Get the current URL
@@ -189,12 +197,12 @@
       });
 
       // Hamburger menu toggle
-      const hamburgerMenu = document.getElementById("hamburger-menu");
-      const tabContainer = document.getElementById("tab-container");
-
-      hamburgerMenu.addEventListener("click", () => {
-        tabContainer.classList.toggle("show");
-      });
+      document
+        .getElementById("hamburger-menu")
+        .addEventListener("click", function () {
+          const tabContainer = document.getElementById("tab-container");
+          tabContainer.classList.toggle("show");
+        });
     </script>
   </body>
 </html>
